@@ -18,7 +18,8 @@ Return 200 Status code
 json = {
   status: "Success",
   message: "Blog fetched successfully",
-  data: [
+  data: { 
+    Blog: [
     {
       id: 1,
       heading: 'Binary Search',
@@ -33,10 +34,9 @@ json = {
       tags: 'msbksbn'
       creator_id: 'xyz2'
     }
-  ]
+  ] }
 }
 
 */
-
 
 module.exports = app;
