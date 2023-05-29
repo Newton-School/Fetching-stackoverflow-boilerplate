@@ -2,13 +2,13 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 
-// Importing discussions from discussions.json file
-const discussions = JSON.parse(fs.readFileSync(`data/blog.json`));
+// Importing blog from blog.json file
+const Blog = JSON.parse(fs.readFileSync(`data/blog.json`));
 
 // Middlewares
 app.use(express.json());
 
-// Write GET endpoint for sending all the discussions to user here
+// Write GET endpoint for sending all the blog to user here
 
 /*
 
@@ -16,7 +16,9 @@ Endpoint - /api/v1/blogs
 
 Return 200 Status code
 json = {
-  discussions: [
+  status: "Success",
+  message: "Blog fetched successfully",
+  data: [
     {
       id: 1,
       heading: 'Binary Search',
